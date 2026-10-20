@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>Media Gallery</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a href="/gallery/" class="brand" id="home-link">Media Gallery</a>
+      <nav class="breadcrumbs" id="breadcrumbs" aria-label="Breadcrumb"></nav>
+    </div>
+  </header>
+
+  <main class="page">
+    <div class="toolbar">
+      <div class="count" id="count"></div>
+      <div class="controls">
+        <label class="sort-label" for="sort">Sort by</label>
+        <select id="sort">
+          <option value="date">Date</option>
+          <option value="name">Name</option>
+          <option value="size">Size</option>
+        </select>
+        <button id="order" type="button" class="order-btn" title="Toggle sort order" aria-label="Toggle sort order">&#9660;</button>
+      </div>
+    </div>
+
+    <div id="grid" class="gallery"></div>
+    <div id="message" class="message" hidden></div>
+    <nav id="pagination" class="pagination" aria-label="Pages"></nav>
+  </main>
+
+  <script src="/app.js"></script>
+</body>
+</html>

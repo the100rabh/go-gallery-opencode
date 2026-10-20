@@ -1,0 +1,21 @@
+# Media Gallery example configuration.
+# Copy to config.yaml and adjust before deploying:
+#   cp config.example.yaml config.yaml
+
+server:
+  # Host to bind. Empty string (or "0.0.0.0") listens on all interfaces.
+  host: "0.0.0.0"
+  port: 8080
+
+media:
+  # Directory containing your photos and videos. Inside the container this
+  # is the read-only Docker mount. Never needs write access.
+  root: "/media"
+  # Files per page (1-500). Directories are always shown in full.
+  page_size: 50
+
+auth:
+  # Simple HTTP Basic authentication. Recommended even on a home LAN.
+  enabled: true
+  username: "admin"
+  password: "change-me"

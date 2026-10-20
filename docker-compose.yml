@@ -1,0 +1,15 @@
+services:
+  media-gallery:
+    build: .
+    image: media-gallery:latest
+    container_name: media-gallery
+    ports:
+      - "8080:8080"
+    volumes:
+      # Your photos/videos. Read-only: the application never writes here.
+      - /path/to/photos:/media:ro
+      # Configuration. Edit ./config.yaml first (especially the password).
+      - ./config.yaml:/etc/media-gallery/config.yaml:ro
+    command: ["-config", "/etc/media-gallery/config.yaml"]
+    read_only: true
+    restart: unless-stopped

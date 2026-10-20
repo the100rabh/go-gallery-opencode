@@ -1,0 +1,10 @@
+.git
+.gitignore
+config.yaml
+config.example.yaml
+docker-compose.yml
+Dockerfile
+.dockerignore
+README.md
+Makefile
+media-gallery
